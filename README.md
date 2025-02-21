@@ -1,5 +1,9 @@
 # Projeto para a disciplina Projeto Integrador – Análise de Soluções Integradas para Organizações
 
+## Modelo físico do banco de dados
+
+[<img src="static/images/pdm.png">](https://dbdocs.io/embed/b65bef8cf417d931a62afdd5ff6b1ff1/314698636cd94b9e80c1b85e92b34351)
+
 ## Instalação e configuração do projeto
 
 ### Configurar repositório 
