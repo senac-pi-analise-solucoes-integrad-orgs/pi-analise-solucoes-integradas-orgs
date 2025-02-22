@@ -28,6 +28,7 @@ class AddressAdmin(admin.ModelAdmin):
         'number',
     )
     search_fields = (
+        'specialists__user__email',
         'zip_code',
         'state',
         'city',
@@ -45,6 +46,15 @@ class PhoneNumberAdmin(admin.ModelAdmin):
     )
     search_fields = (
         'phone_number',
+        'whatsapp_number',
+        'specialist__user__email',
+        'profile__user__email',
+    )
+
+    # Details
+    autocomplete_fields = (
+        'specialist',
+        'profile',
     )
 
 
@@ -70,11 +80,24 @@ class SpecialistAdmin(admin.ModelAdmin):
         '_specialties',
     )
     search_fields = (
+        'user__email',
         'user__first_name',
         'user__last_name',
         'address',
         'opening_hours',
         'specialties',
+    )
+    list_filter = (
+        'specialties',
+    )
+
+    # Details
+    autocomplete_fields = (
+        'user',
+        'specialties',
+    )
+    raw_id_fields = (
+        'address',
     )
 
     @staticmethod
@@ -97,8 +120,14 @@ class ProfileAdmin(admin.ModelAdmin):
         'date_of_birth',
     )
     search_fields = (
+        'user__email',
         'user__first_name',
         'user__last_name',
+    )
+
+    # Details
+    autocomplete_fields = (
+        'user',
     )
 
     @staticmethod
@@ -121,6 +150,15 @@ class ReviewAdmin(admin.ModelAdmin):
         'profile',
     )
     search_fields = (
+        'specialist__user__email',
+        'profile__user__email',
+    )
+    list_filter = (
+        'rating',
+    )
+
+    # Details
+    autocomplete_fields = (
         'specialist',
         'profile',
     )

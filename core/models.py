@@ -10,6 +10,9 @@ class User(AbstractUser):
     def name(self) -> str:
         return f'{self.first_name} {self.last_name}'
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Address(models.Model):
     zip_code = models.CharField(__('Zip code'), max_length=9)
