@@ -57,6 +57,9 @@
             <li class="nav-item">
                 <a href="#clinicas">Clínicas</a>
             </li>
+            <li class="nav-item btn-perfil">
+                <a href="perfil.html">Meu Perfil</a>
+            </li>
             <li class="nav-item btn-sair">
                 <a href="login.html">Sair</a>
             </li>
@@ -193,8 +196,9 @@
         <section id="clinicas">
             <h2 class="section-title">Clínicas</h2>
             <form action="" class="form_pesq_clin">
-                <input type="text" name="estado_busca" id="estado_busca" class="estado_busca" placeholder="Estado">
-                <input type="text" name="cidade_busca" id="cidade_busca" class="cidade_busca" placeholder="Cidade">
+
+                <select id="uf" name="estado_busca" class="estado_busca"></select>
+                <select id="cidade" name="cidade_busca" class="cidade_busca"></select>
                 <a href="#mapa" class="form_pes_botao">Buscar</a>
             </form>            
 
@@ -202,7 +206,7 @@
                 <h2>Resultados da Pesquisa</h2>
     
                 <div class="lista_clinicas">
-                    <div class="linha_clinica">
+                    <div class="linha_clinica" id="clinica-saopaulo">
                         <div class="coluna_foto">
                             <div>
                                 <img src="src/images/clinicas.png" alt="Foto Ilustrativa de Clinicas" class="foto_clinica">
@@ -220,11 +224,11 @@
                                 </div>
                             </div>
                             <div class="coluna_desc">
-                                <p>Rua 78, Bairro Mangaba - SP <br> Tel: (11) 3245-6995 <br> Funcionamento 08hrs ás 18hrs <br> Neuropsicologia</p>
+                                <p>Rua 78, Bairro Mangaba - São Paulo - SP <br> Tel: (11) 3245-6995 <br> Funcionamento 08hrs ás 18hrs <br> Neuropsicologia</p>
                             </div>
                         </div>
                     </div>
-                    <div class="linha_clinica">
+                    <div class="linha_clinica" id="clinica-saopaulo">
                         <div class="coluna_foto">
                             <div>
                                 <img src="src/images/clinicas.png" alt="Foto Ilustrativa de Clinicas" class="foto_clinica">
@@ -242,7 +246,7 @@
                                 </div>
                             </div>
                             <div class="coluna_desc">
-                                <p>Rua 12, Bairro Florescer - SP <br> Tel: (11) 3245-6994 <br> Funcionamento 08hrs ás 19hrs <br> Psicopedagogia</p>
+                                <p>Rua 12, Bairro Florescer - São Paulo - SP <br> Tel: (11) 3245-6994 <br> Funcionamento 08hrs ás 19hrs <br> Psicopedagogia</p>
                             </div>
                         </div>
                     </div>
@@ -300,6 +304,6 @@
     </footer>
 
     <script src="src/javascript/script.js"></script>
+    <script src="src/javascript/app.js"></script>
 </body>
 </html>
-
