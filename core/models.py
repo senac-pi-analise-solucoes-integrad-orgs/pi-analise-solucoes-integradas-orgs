@@ -104,8 +104,12 @@ class Specialist(models.Model):
         blank=True,
     )
 
-    def __str__(self) -> str:
+    @property
+    def name(self) -> str:
         return self.user.name
+
+    def __str__(self) -> str:
+        return self.name
 
 
 class Profile(models.Model):
