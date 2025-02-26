@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles.css" rel="stylesheet"/>
-  <link href="login.css" rel="stylesheet"/> <!-- Reutilizando o CSS do login para manter o estilo -->
+  <link href="login.css" rel="stylesheet"/>
   <title>Cadastro - Autismo e Apoio</title>
 </head>
 <body>
   <main id="login">
     <h2 class="page-title">Autismo e Apoio</h2>
-    
+
     <div class="login-container">
       <h1 class="title">Crie sua conta</h1>
-      <form action="index.html" method="GET">
+      <form action="/register/" method="POST">
         <div class="input-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" required>
+          <label for="username">Nome</label>
+          <input type="text" id="username" name="username" required>
         </div>
         <div class="input-group">
           <label for="email">E-mail</label>
@@ -27,8 +27,8 @@
           <input type="password" id="password" name="password" required>
         </div>
         <div class="input-group">
-          <label for="confirm-password">Confirme sua senha</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
+          <label for="confirm_password">Confirme sua senha</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
         </div>
         <button type="submit" class="btn-default">Cadastrar</button>
       </form>
