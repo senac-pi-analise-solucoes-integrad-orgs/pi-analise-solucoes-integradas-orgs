@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles.css" rel="stylesheet"/>
-  <link href="login.css" rel="stylesheet"/>
-  <title>Login - Autismo e Apoio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="login.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Login - Autismo e Apoio</title>
 </head>
 <body>
-  <main id="login">
+<main id="login">
     <!-- Título fora da caixa de login -->
     <h2 class="page-title">Autismo e Apoio</h2>
-    
+
     <div class="login-container">
-      <h1 class="title">Bem-vindo</h1>
-      <form action="index.html" method="GET">
-        <div class="input-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="input-group">
-          <label for="password">Senha</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit" class="btn-default">Entrar</button>
-      </form>
-      
-      <!-- Mensagem de cadastro -->
-      <p class="register-message">
-        Não tem cadastro? <a href="cadastro.html">Cadastre-se aqui</a>
-      </p>
-      
+        <h1 class="title">Bem-vindo</h1>
+        <form action="http://localhost:8000/api-token-auth/" method="POST">
+            <div class="input-group">
+                <label for="username">Nome de usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-default">Entrar</button>
+        </form>
+
+        <!-- Mensagem de cadastro -->
+        <p class="register-message">
+            Não tem cadastro? <a href="cadastro.html">Cadastre-se aqui</a>
+        </p>
     </div>
-  </main>
+</main>
+<script src="src/javascript/login.js"></script>
 </body>
 </html>
