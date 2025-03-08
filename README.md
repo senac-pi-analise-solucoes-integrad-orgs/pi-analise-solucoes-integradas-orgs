@@ -80,3 +80,23 @@ python manage.py runserver
 - Acessar aplicação link [http://localhost:8000/](http://localhost:8000/)
 - Administração no link [http://localhost:8000/admin/](http://localhost:8000/admin/) 
 
+# Link Do FIGMA para base de Pré-Projeto
+
+- Acessar o projeto link https://www.figma.com/design/atLuWZJJmQx8BcZqgy6LPy/AUTISMO_E_APOIO?node-id=55-2&t=UCI3yTqfDXOrEL22-0
+
+## Telas
+
+![image](https://github.com/user-attachments/assets/0fcb5821-a26e-4188-bb17-f0b891fe55b8)
+
+![image](https://github.com/user-attachments/assets/bd9b6df5-a099-4537-92fd-0fcd540240b1)
+
+![image](https://github.com/user-attachments/assets/c4521378-18d7-4978-80ab-1b0888178b99)
+
+![image](https://github.com/user-attachments/assets/82a681b4-56a4-4e79-b7ed-f4a370261cd6)
+
+![image](https://github.com/user-attachments/assets/06e28655-fadf-4893-a0fc-c94dd31f4d1d)
+
+![image](https://github.com/user-attachments/assets/e59e1ddd-1fa5-468e-9144-b8cd61122e7f)
+
+
+
