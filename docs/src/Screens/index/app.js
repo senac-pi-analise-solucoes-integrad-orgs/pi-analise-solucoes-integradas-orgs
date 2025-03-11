@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Exibir todas as clínicas quando UF e cidade forem São Paulo
     buscarBtn.addEventListener("click", function (event) {
         event.preventDefault(); // Evita o comportamento padrão do link
-        
+
         const estadoSelecionado = uf.value;
         const cidadeSelecionada = cidade.value;
 

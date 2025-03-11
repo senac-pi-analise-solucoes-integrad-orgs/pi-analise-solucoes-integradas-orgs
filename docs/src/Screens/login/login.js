@@ -1,6 +1,9 @@
-$(document).ready(function () {
+import Cookies from 'js-cookie';
+
+document.addEventListener("DOMContentLoaded", () => {
     const form = document.forms[0];
     form.addEventListener('submit', submitHandler);
+
     function submitHandler(e) {
         e.preventDefault();
         fetch(form.action, {
@@ -8,6 +11,9 @@ $(document).ready(function () {
             body: new URLSearchParams(new FormData(form))
         })
             .then(response => response.json())
-            .then(data => console.log(data.token))
+            .then(({token}) => {
+                Cookies.set('token', token);
+                window.location.href = '/';
+            })
     }
 });
