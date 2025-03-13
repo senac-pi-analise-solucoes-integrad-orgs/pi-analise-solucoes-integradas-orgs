@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+# from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as __
 
 from core.models import (
@@ -7,13 +7,15 @@ from core.models import (
     PhoneNumber,
     Specialty,
     Specialist,
-    Review, User, Profile,
+    Review,
+    Profile,
+    # User,
 )
 
 
-@admin.register(User)
-class UserAdmin(BaseUserAdmin):
-    pass
+# @admin.register(User)
+# class UserAdmin(BaseUserAdmin):
+#     pass
 
 
 @admin.register(Address)
