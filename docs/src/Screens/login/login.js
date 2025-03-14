@@ -1,4 +1,5 @@
 const API_URL = 'https://pi-analise-solucoes-integradas-production.up.railway.app/';
+const BASE_URL = 'https://senac-pi-analise-solucoes-integrad-orgs.github.io/pi-analise-solucoes-integradas-orgs/';
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.forms[0];
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(({token}) => {
                 Cookies.set('token', token);
-                window.location.href = '/';
+                window.location.href = BASE_URL;
             })
     }
 });
