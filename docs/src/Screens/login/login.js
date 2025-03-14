@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie';
-
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.forms[0];
     form.addEventListener('submit', submitHandler);
