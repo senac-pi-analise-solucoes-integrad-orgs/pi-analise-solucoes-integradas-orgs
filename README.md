@@ -44,7 +44,7 @@ source .venv/bin/activate
 Caso seu ambiente seja Microsoft Windows, utilize:
 
 ```shell
-.\venv\Scripts\activate
+.\.venv\Scripts\activate
 ```
 
 #### Instalar pacotes necessários
