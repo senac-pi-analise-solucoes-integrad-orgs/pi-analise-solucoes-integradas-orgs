@@ -1,12 +1,13 @@
 import Cookies from 'js-cookie';
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.forms[0];
     form.addEventListener('submit', submitHandler);
 
     function submitHandler(e) {
         e.preventDefault();
-        fetch(form.action, {
+        const url = `${import.meta.env.VITE_API_URL}api-token-auth/`
+        fetch(url, {
             method: 'post',
             body: new URLSearchParams(new FormData(form))
         })
