@@ -144,7 +144,7 @@ nom run dev
 
 ##### Abrir aplicação no navegador
 
-- Acessar aplicação link [http://localhost:4173/](http://localhost:8000/)
+- Acessar aplicação link [http://localhost:5173/](http://localhost:5173/)
 
 ## Links utilizados durante o desenvolvimento
 
