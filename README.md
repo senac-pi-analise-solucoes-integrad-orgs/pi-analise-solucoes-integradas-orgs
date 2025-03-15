@@ -24,7 +24,7 @@ A aplicação está dividida em dois serviços:
 
 ![image](https://github.com/user-attachments/assets/e59e1ddd-1fa5-468e-9144-b8cd61122e7f)
 
-## Instalação e configuração do projeto
+## Instalação e configuração
 
 ### Configurar repositório 
 
@@ -45,9 +45,17 @@ Entrar na pasta do projeto:
 cd pi-analise-solucoes-integradas-orgs
 ```
 
-### Configurar ambiente virtual Python
+### Aplicação Backend
 
-#### Criar ambiente virtual
+Entrar na pasta da aplicação:
+
+```shell
+cd backend
+```
+
+#### Configurar ambiente virtual Python
+
+##### Criar ambiente virtual
 
 ```shell
 python -m venv .venv
@@ -55,7 +63,7 @@ python -m venv .venv
 
 Caso não funcione com `python`, você pode tentar com `python3`.
 
-#### Entrar no ambiente virtual
+##### Entrar no ambiente virtual
 
 ```shell
 source .venv/bin/activate
@@ -67,38 +75,76 @@ Caso seu ambiente seja Microsoft Windows, utilize:
 .\.venv\Scripts\activate
 ```
 
-#### Instalar pacotes necessários
+##### Instalar pacotes necessários
 
 ```shell
 pip install -r requirements.txt
 ```
 
-### Configurar banco de dados 
+#### Configurar banco de dados 
 
-#### Executar migrate para criar as tabelas
+##### Executar migrate para criar as tabelas
 
 ```shell
 python manage.py migrate
 ```
 
-#### Criar Super Usuário
+##### Criar Super Usuário
 
 ```shell
 python manage.py createsuperuser
 ```
 
-### Rodar a aplicação
+#### Configurar variáveis de ambiente
 
-#### Iniciar o servidor
+Fazer uma cópia do arquivo `contrib/env.sample` para `.env`, na raiz do projeto:
+
+```shell
+cp contrib/env.sample .env
+```
+
+#### Rodar a aplicação
+
+##### Iniciar o servidor
 
 ```shell
 python manage.py runserver
 ```
 
-#### Abrir aplicação no navegador
+##### Abrir aplicação no navegador
 
 - Acessar aplicação link [http://localhost:8000/](http://localhost:8000/)
 - Administração no link [http://localhost:8000/admin/](http://localhost:8000/admin/)
+
+## Instalação e configuração da aplicação Frontend
+
+### Aplicação Frontend
+
+Entrar na pasta da aplicação:
+
+```shell
+cd frontend
+```
+
+#### Configurar variáveis de ambiente
+
+Fazer uma cópia do arquivo `contrib/env.sample` para `.env`, na raiz do projeto:
+
+```shell
+cp contrib/env.sample .env
+```
+
+#### Rodar a aplicação
+
+##### Iniciar o servidor de desenvolvimento
+
+```shell
+nom run dev
+```
+
+##### Abrir aplicação no navegador
+
+- Acessar aplicação link [http://localhost:4173/](http://localhost:8000/)
 
 ## Links utilizados durante o desenvolvimento
 
