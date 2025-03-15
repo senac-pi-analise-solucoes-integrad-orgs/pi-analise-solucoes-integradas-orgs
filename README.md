@@ -1,10 +1,30 @@
 # Projeto para a disciplina Projeto Integrador – Análise de Soluções Integradas para Organizações
 
+A aplicação está dividida em dois serviços:
+- [Backend](https://pi-analise-solucoes-integradas-production.up.railway.app/): aplicação [Django](http://djangoproject.com) (Python) com API REST criada com [Django Rest Framework (DRF)](https://www.django-rest-framework.org). Instalada na plataforma de infraestrutura em nuvem [Railway](https://railway.com);
+- [Frontend](https://pi-analise-solucoes-integradas-orgs.vercel.app/): aplicação web (HTML, CSS e Javascript) construída com [Vite](https://vite.dev). Instalada na plataforma de infraestrutura em nuvem [Vercel](https://vercel.com/).
+
 ## Modelo físico do banco de dados
 
-[<img src="static/images/pdm.png">](https://dbdocs.io/embed/b65bef8cf417d931a62afdd5ff6b1ff1/314698636cd94b9e80c1b85e92b34351)
+[![image](https://github.com/user-attachments/assets/254f35ee-2a82-48f1-8161-4ccfa275135c)](https://dbdocs.io/embed/b65bef8cf417d931a62afdd5ff6b1ff1/314698636cd94b9e80c1b85e92b34351)
 
-## Instalação e configuração do projeto
+## Tela para o pré-projeto
+
+- [Projeto completo no Figma](https://www.figma.com/design/atLuWZJJmQx8BcZqgy6LPy/AUTISMO_E_APOIO?node-id=55-2&t=UCI3yTqfDXOrEL22-0)
+
+![image](https://github.com/user-attachments/assets/0fcb5821-a26e-4188-bb17-f0b891fe55b8)
+
+![image](https://github.com/user-attachments/assets/bd9b6df5-a099-4537-92fd-0fcd540240b1)
+
+![image](https://github.com/user-attachments/assets/c4521378-18d7-4978-80ab-1b0888178b99)
+
+![image](https://github.com/user-attachments/assets/82a681b4-56a4-4e79-b7ed-f4a370261cd6)
+
+![image](https://github.com/user-attachments/assets/06e28655-fadf-4893-a0fc-c94dd31f4d1d)
+
+![image](https://github.com/user-attachments/assets/e59e1ddd-1fa5-468e-9144-b8cd61122e7f)
+
+## Instalação e configuração
 
 ### Configurar repositório 
 
@@ -25,9 +45,17 @@ Entrar na pasta do projeto:
 cd pi-analise-solucoes-integradas-orgs
 ```
 
-### Configurar ambiente virtual Python
+### Aplicação Backend
 
-#### Criar ambiente virtual
+Entrar na pasta da aplicação:
+
+```shell
+cd backend
+```
+
+#### Configurar ambiente virtual Python
+
+##### Criar ambiente virtual
 
 ```shell
 python -m venv .venv
@@ -35,7 +63,7 @@ python -m venv .venv
 
 Caso não funcione com `python`, você pode tentar com `python3`.
 
-#### Entrar no ambiente virtual
+##### Entrar no ambiente virtual
 
 ```shell
 source .venv/bin/activate
@@ -47,56 +75,77 @@ Caso seu ambiente seja Microsoft Windows, utilize:
 .\.venv\Scripts\activate
 ```
 
-#### Instalar pacotes necessários
+##### Instalar pacotes necessários
 
 ```shell
 pip install -r requirements.txt
 ```
 
-### Configurar banco de dados 
+#### Configurar banco de dados 
 
-#### Executar migrate para criar as tabelas
+##### Executar migrate para criar as tabelas
 
 ```shell
 python manage.py migrate
 ```
 
-#### Criar Super Usuário
+##### Criar Super Usuário
 
 ```shell
 python manage.py createsuperuser
 ```
 
-### Rodar a aplicação
+#### Configurar variáveis de ambiente
 
-#### Iniciar o servidor
+Fazer uma cópia do arquivo `contrib/env.sample` para `.env`, na raiz do projeto:
+
+```shell
+cp contrib/env.sample .env
+```
+
+#### Rodar a aplicação
+
+##### Iniciar o servidor
 
 ```shell
 python manage.py runserver
 ```
 
-#### Abrir aplicação no navegador
+##### Abrir aplicação no navegador
 
 - Acessar aplicação link [http://localhost:8000/](http://localhost:8000/)
-- Administração no link [http://localhost:8000/admin/](http://localhost:8000/admin/) 
+- Administração no link [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
-# Link Do FIGMA para base de Pré-Projeto
+## Instalação e configuração da aplicação Frontend
 
-- Acessar o projeto link https://www.figma.com/design/atLuWZJJmQx8BcZqgy6LPy/AUTISMO_E_APOIO?node-id=55-2&t=UCI3yTqfDXOrEL22-0
+### Aplicação Frontend
 
-## Telas
+Entrar na pasta da aplicação:
 
-![image](https://github.com/user-attachments/assets/0fcb5821-a26e-4188-bb17-f0b891fe55b8)
+```shell
+cd frontend
+```
 
-![image](https://github.com/user-attachments/assets/bd9b6df5-a099-4537-92fd-0fcd540240b1)
+#### Configurar variáveis de ambiente
 
-![image](https://github.com/user-attachments/assets/c4521378-18d7-4978-80ab-1b0888178b99)
+Fazer uma cópia do arquivo `contrib/env.sample` para `.env`, na raiz do projeto:
 
-![image](https://github.com/user-attachments/assets/82a681b4-56a4-4e79-b7ed-f4a370261cd6)
+```shell
+cp contrib/env.sample .env
+```
 
-![image](https://github.com/user-attachments/assets/06e28655-fadf-4893-a0fc-c94dd31f4d1d)
+#### Rodar a aplicação
 
-![image](https://github.com/user-attachments/assets/e59e1ddd-1fa5-468e-9144-b8cd61122e7f)
+##### Iniciar o servidor de desenvolvimento
 
+```shell
+nom run dev
+```
 
+##### Abrir aplicação no navegador
 
+- Acessar aplicação link [http://localhost:5173/](http://localhost:5173/)
+
+## Links utilizados durante o desenvolvimento
+
+- [Multipage Vite Vanilla JavaScript](https://dev.to/mochamadboval/multipage-vite-vanilla-javascript-3i0l)
